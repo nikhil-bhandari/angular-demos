@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04. UI Router</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/nested-states.js"></script>
+    <link rel="stylesheet" href="css/app.css"/>
+    <base href="/angular/04.-UI-Router/"/>
+</head>
+<body ng-app="demo">
+
+<a ui-sref="main">Main</a>
+<a ui-sref="main.list">List</a>
+<a ui-sref="main.list.of">Of</a>
+<a ui-sref="main.list.of.something">Something</a>
+
+<div ui-view=""></div>
+
+</body>
+</html>

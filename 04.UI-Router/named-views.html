@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04. UI Router</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/named-views.js"></script>
+    <link rel="stylesheet" href="css/app.css"/>
+    <base href="/angular/04.-UI-Router/"/>
+    <style type="text/css">
+        .left, .right, .top{ border: thick solid red;min-height: 50px;margin-bottom: 10px;}
+        .top{ width: 100%;}
+        .right{ width: 45%; float: left;}
+        .left{ width: 45%;float: left;}
+    </style>
+</head>
+<body ng-app="demo">
+
+<a ui-sref="main">Main</a>
+
+<div ui-view="" class="top"></div>
+<div ui-view="top" class="top"></div>
+<div ui-view="left" class="left"></div>
+<div ui-view="right" class="right"></div>
+
+</body>
+</html>

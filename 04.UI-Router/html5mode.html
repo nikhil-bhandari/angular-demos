@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04. UI Router</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/html5mode.js"></script>
+    <link rel="stylesheet" href="css/app.css"/>
+    <base href="/angular/04.-UI-Router/"/>
+</head>
+<body ng-app="demo">
+
+<a ui-sref="main">Go To Main</a>
+<a ui-sref="about">Go To About</a>
+<a ui-sref="contact">Go To Contact</a>
+
+<div ui-view=""></div>
+
+</body>
+</html>

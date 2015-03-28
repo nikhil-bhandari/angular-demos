@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01. Barebones Angular app</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-app="demo">
+<div ng-controller="DemoController as demo">
+
+    <input type="checkbox" ng-model="demo.checked"/><br/>
+
+            <span ng-show="demo.checked">
+              on show
+            </span>
+
+        <span ng-hide="demo.checked">
+              on hide
+            </span>
+</div>
+</body>
+</html>
