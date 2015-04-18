@@ -1,13 +1,15 @@
 var app = angular.module("demo", [])
 
-app.controller("DemoController", function ($scope){
-    $scope.message = "World"
+app.controller("DemoController",
+    function ($scope){
+    $scope.message = "Ashish"
 });
 
 
 // Inline Array Annotation
 
-app.controller("Demo1Controller", ["$scope", function ($scope){
+app.controller("Demo1Controller",
+    ["$scope", function ($scope){
     $scope.message = "Inside Controller 1";
     console.log($scope.message);
 }]);

@@ -1,23 +1,26 @@
 var app = angular.module('demo', ['ngResource']);
 
 app.factory('TodoApiService', function ($resource) {
-        return $resource('/v1/api/todo/:action/:id', {
-                id: '@_id'
+    return $resource('/api/todo/:id', {
+            id: '@_id'
+        },
+        {
+            list: {
+                method: 'GET',
+                isArray: true
             },
-            {
-                get: {
-                    method: 'GET',
-                    params: {action: "show"}
-                },
-                update: {
-                    method: 'PUT'
-                },
-                list: {
-                    method: 'GET'
-                },
-                delete: {
+            show: {
+                method: 'GET'
+            },
+            create: {
+                method: 'POST'
+            },
+            update: {
+                method: 'PUT'
+            },
+            delete: {
+                method: 'DELETE'
+            }
 
-                }
-
-            });
-    });
+        });
+});
